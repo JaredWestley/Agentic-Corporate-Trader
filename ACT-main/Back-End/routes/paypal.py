@@ -7,8 +7,8 @@ bp = Blueprint('paypal_bp', __name__)
 # Configure PayPal SDK
 paypalrestsdk.configure({
     "mode": "sandbox",  # or "live" for production
-    "client_id": "ARBjhm4LTjPyHWE5k_-BcosNlZV-0s56jxBPChiP7bFtMmfv17M8O6A-ci-7eycUV5Etf0EGX06ZnWmh",
-    "client_secret": "EGRDkUhS78RFafwh4WD7_vgVn064ZtaMU1c0j8xdX-Q597aVbKdtxyxuqjNw17wCWA39AnTjny_wQfAL"
+    "client_id": "Enter-Your-Info-Here",
+    "client_secret": "Enter-Your-Info-Here"
 })
 
 @bp.route('/api/create-paypal-payment', methods=['POST'])
