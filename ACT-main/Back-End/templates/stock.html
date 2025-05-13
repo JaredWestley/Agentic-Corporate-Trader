@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Information</title>
+</head>
+<body>
+    <h1>Stock Information</h1>
+
+    {% if stock_info %}
+        <h2>Details for {{ stock_info.ticker }}</h2>
+        <p><strong>Name:</strong> {{ stock_info.name }}</p>
+        <p><strong>Full Name:</strong> {{ stock_info.fullName }}</p>
+        <p><strong>Industry:</strong> {{ stock_info.industry }}</p>
+        <p><strong>Current Price:</strong> ${{ stock_info.price }}</p>
+        <p><strong>Day High:</strong> ${{ stock_info.dayHigh }}</p>
+        <p><strong>Day Low:</strong> ${{ stock_info.dayLow }}</p>
+        <p><strong>Day Range:</strong> ${{ stock_info.dayRange }}</p>
+        <p><strong>Percentage Change:</strong> {{ stock_info.percentage_change }}%</p>
+
+        <h3>Price Chart</h3>
+        <img src="data:image/png;base64,{{ stock_info.chart }}" alt="Stock Chart">
+    {% endif %}
+</body>
+</html>

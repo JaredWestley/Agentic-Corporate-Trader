@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cryptocurrency Info</title>
+</head>
+<body>
+    <h1>Cryptocurrency Information</h1>
+
+    {% if stock_info.error %}
+        <p>Error: {{ stock_info.error }}</p>
+    {% else %}
+        <table border="1">
+            <tr>
+                <th>Symbol</th>
+                <td>{{ stock_info.symbol }}</td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td>{{ stock_info.name }}</td>
+            </tr>
+            <tr>
+                <th>Price</th>
+                <td>{{ stock_info.price }}</td>
+            </tr>
+            <tr>
+                <th>Previous Close</th>
+                <td>{{ stock_info.previous_close }}</td>
+            </tr>
+            <tr>
+                <th>Price Change</th>
+                <td>{{ stock_info.price_change }}</td>
+            </tr>
+            <tr>
+                <th>Percentage Change</th>
+                <td>{{ stock_info.percentage_change }}%</td>
+            </tr>
+            <tr>
+                <th>Day High</th>
+                <td>{{ stock_info.day_high }}</td>
+            </tr>
+            <tr>
+                <th>Day Low</th>
+                <td>{{ stock_info.day_low }}</td>
+            </tr>
+            <tr>
+                <th>Day Range</th>
+                <td>{{ stock_info.day_range }}</td>
+            </tr>
+        </table>
+
+        <h3>Price Chart</h3>
+        <img src="data:image/png;base64,{{ stock_info.chart }}" alt="Stock Chart">
+    {% endif %}
+</body>
+</html>
