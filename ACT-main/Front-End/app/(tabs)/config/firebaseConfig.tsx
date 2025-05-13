@@ -5,12 +5,12 @@ import { getAuth, GoogleAuthProvider, signInWithPopup } from 'firebase/auth';
 import { getFirestore } from 'firebase/firestore';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCPPcbzCrqV4qtCwdBYLdV2-nGTSDHvafU",
-    authDomain: "mtu-act.firebaseapp.com",
-    projectId: "mtu-act",
-    storageBucket: "mtu-act.appspot.com",
-    messagingSenderId: "57164033797",
-    appId: "1:57164033797:web:c315903a913d8308e3d16c",
+    apiKey: "Enter-Your-Info-Here",
+    authDomain: "Enter-Your-Info-Here",
+    projectId: "Enter-Your-Info-Here",
+    storageBucket: "Enter-Your-Info-Here",
+    messagingSenderId: "Enter-Your-Info-Here",
+    appId: "Enter-Your-Info-Here",
 };
 
 // Initialize Firebase
